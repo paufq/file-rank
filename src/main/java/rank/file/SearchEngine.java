@@ -1,13 +1,13 @@
-package com.rank.file;
+package rank.file;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.Map.Entry;
 
 public class SearchEngine {
 
@@ -35,7 +35,7 @@ public class SearchEngine {
 		try (Scanner keyboard = new Scanner(System.in);) {
 			while (true) {
 				System.out.print("search>");
-				final String line = keyboard.nextLine();
+				final String line = keyboard.next();
 				this.words = getUniqueWords(line);
 				this.searchSize = words.size();
 				computeFileFrequencies(indexedDir, words);
@@ -52,6 +52,11 @@ public class SearchEngine {
 		}
 	}
 
+	/**
+	 * Removes word duplicates
+	 * @param line
+	 * @return
+	 */
 	private Set<String> getUniqueWords(String line) {
 		//String[] uniqueWords = line.split(" ");
 		Set<String> uniqueWords = new TreeSet<String>();

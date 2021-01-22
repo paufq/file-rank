@@ -1,4 +1,4 @@
-package com.rank.file;
+package rank.file;
 
 import java.io.File;
 import java.io.FileNotFoundException;
