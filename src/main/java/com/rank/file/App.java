@@ -1,7 +1,7 @@
 package com.rank.file;
 
 /**
- * File Ranker
+ * File Ranker.
  *
  */
 public class App {
