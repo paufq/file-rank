@@ -35,7 +35,7 @@ public class SearchEngine {
 		try (Scanner keyboard = new Scanner(System.in);) {
 			while (true) {
 				System.out.print("search>");
-				final String line = keyboard.next();
+				String line = keyboard.nextLine();
 				this.words = getUniqueWords(line);
 				this.searchSize = words.size();
 				computeFileFrequencies(indexedDir, words);
@@ -58,7 +58,6 @@ public class SearchEngine {
 	 * @return
 	 */
 	private Set<String> getUniqueWords(String line) {
-		//String[] uniqueWords = line.split(" ");
 		Set<String> uniqueWords = new TreeSet<String>();
 		uniqueWords.addAll(Arrays.asList(line.split(" ")));
 		return uniqueWords;

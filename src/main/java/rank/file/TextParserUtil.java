@@ -1,5 +1,7 @@
 package rank.file;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class TextParserUtil {
 	
 	/**
@@ -8,8 +10,8 @@ public class TextParserUtil {
 	 * @param word
 	 * @return
 	 */
-	public static String cleanWord(String word) {
-		return word;
+	public static String cleanWord(String inWord) {
+		return StringUtils.stripAccents(inWord).trim().toLowerCase().replaceAll("[^\\p{L}\\p{Nd}]+", "");
 	}
 
 }
