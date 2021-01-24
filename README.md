@@ -21,7 +21,7 @@ Clone the repository to your working directory:\
 `git clone "https://github.com/paufq/file-rank.git"`
 
 Build the jar (currently there are no tests):\
-`cd file-rank`
+`cd file-rank`\
 `mvn clean install -DskipTests`
 
 Run the program replacing the <input_directory> argument:\
